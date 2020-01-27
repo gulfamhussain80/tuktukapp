@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-
 void main()
 {
 
@@ -8,10 +6,11 @@ void main()
     title: "TukTuk",
     home: new Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
       ),
 
     ),
   ));
+
 
 }
