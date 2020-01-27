@@ -1,6 +1,6 @@
-# tuktuk_app
+# hituktuk
 
-Solution Challenge app, tuktuk automation.
+A new Flutter application.
 
 ## Getting Started
 
