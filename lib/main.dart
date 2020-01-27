@@ -8,7 +8,7 @@ void main()
     title: "TukTuk",
     home: new Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
       ),
 
     ),
