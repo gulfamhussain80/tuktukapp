@@ -4,6 +4,8 @@ void main()
 {
 
   runApp(new MaterialApp(
+    title: "Tuk Tuk",
+    home: new UserHomePage(),
 
   ));
 
