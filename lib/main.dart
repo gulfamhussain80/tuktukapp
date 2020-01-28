@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hituktuk/ui/userhomepage.dart';
 void main()
 {
 
   runApp(new MaterialApp(
-    title: "TukTuk",
-    home: new Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        centerTitle: true,
-      ),
 
-    ),
   ));
 
 
