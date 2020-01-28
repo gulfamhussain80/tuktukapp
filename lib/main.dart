@@ -4,13 +4,7 @@ void main()
 
   runApp(new MaterialApp(
     title: "TukTuk",
-    home: new Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        centerTitle: true,
-      ),
-
-    ),
+    home: new Login(),
   ));
 
 
