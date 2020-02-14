@@ -99,6 +99,24 @@ class _UserHomePageState extends State<UserHomePage> {
                           style: TextStyle(fontSize: 20),
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
+                              icon: Icon(Icons.people),
+                              hintText: "People?",
+                              focusColor: Color(0xffe59f8a),
+                              border: OutlineInputBorder(),
+                              hintStyle: TextStyle(fontSize: 20)),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Enter number of people';
+                            }
+                            return null;
+                          },
+                        ),SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          style: TextStyle(fontSize: 20),
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
                               icon: Icon(Icons.attach_money),
                               hintText: "Fare?",
                               focusColor: Color(0xffe59f8a),
