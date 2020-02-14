@@ -6,7 +6,11 @@ void main()
 
   runApp(new MaterialApp(
     title: "Tuk Tuk",
-    home:  SignInOne()
+    home:  SignInOne(),
+      routes: <String, WidgetBuilder> {
+        '/home': (BuildContext context) => UserHomePage(),
+
+      }
 
   ));
 
