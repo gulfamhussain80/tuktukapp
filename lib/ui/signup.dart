@@ -6,6 +6,22 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   final _signUpKey=GlobalKey<State>();
+  String _radioSelected="rider";
+
+  @override
+  void initState() {
+    setState(() {
+      _radioSelected="rider";
+    });
+    super.initState();
+  }
+
+  void handleRadio(String val)
+  {
+    setState(() {
+      _radioSelected=val;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,15 +86,19 @@ class _SignUpState extends State<SignUp> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Radio(
-                  value: 0,
-                  groupValue: "catergory",
+                  value: "rider",
+                  groupValue: _radioSelected,
+                  onChanged: handleRadio,
+                  activeColor: Colors.purple,
                 ),
                 Text(
                   "Rider"
                 ),
                 Radio(
-                  value: 0,
-                  groupValue: "catergory",
+                  value: "driver",
+                  groupValue: _radioSelected,
+                  onChanged: handleRadio,
+                  activeColor: Colors.green,
                 ),
                 Text(
                     "Driver"
