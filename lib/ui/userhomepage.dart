@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_text/gradient_text.dart';
 
 class UserHomePage extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _UserHomePageState extends State<UserHomePage> {
           child: ListView(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 15, left: 15),
+                padding: EdgeInsets.only(top: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -26,14 +27,19 @@ class _UserHomePageState extends State<UserHomePage> {
                       icon: Icon(Icons.menu),
                       onPressed: () {},
                       color: Color(0xffe59f8a),
+                      iconSize: 30,
                     ),
-                    Text(
-                      "Tuk Tuk",
-                      style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w800),
-                    ),
+                    Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: GradientText("Tuk Tuk",
+                            gradient: LinearGradient(colors: [
+                              Color(0xffe59f8a),
+                              Colors.deepOrange.shade300,
+                              Colors.pink.shade300,
+                            ]),
+                            style: TextStyle(
+                                fontSize: 45, fontWeight: FontWeight.w800),
+                            textAlign: TextAlign.center)),
                     SizedBox(
                       width: 50,
                     )
@@ -41,14 +47,15 @@ class _UserHomePageState extends State<UserHomePage> {
                 ),
               ),
               SizedBox(
-                height: 7,
+                height: 4,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 7),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       RichText(
                         text: TextSpan(
@@ -62,7 +69,15 @@ class _UserHomePageState extends State<UserHomePage> {
                                   style: TextStyle(
                                       fontSize: 45, color: Colors.black)),
                             ]),
-                      )
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Center(
+                          child: Text(
+                        "Book a ride now !",
+                        style: TextStyle(fontSize: 30, color: Colors.black),
+                      )),
                     ],
                   ),
                 ),
@@ -110,7 +125,8 @@ class _UserHomePageState extends State<UserHomePage> {
                             }
                             return null;
                           },
-                        ),SizedBox(
+                        ),
+                        SizedBox(
                           height: 10,
                         ),
                         TextFormField(
@@ -130,15 +146,15 @@ class _UserHomePageState extends State<UserHomePage> {
                           },
                         ),
                         SizedBox(
-                          height: 70,
+                          height: 30,
                         ),
                         Container(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Container(
-                                  height: 300.0,
-                                  width: 300.0,
+                                  height: 220.0,
+                                  width: 220.0,
                                   padding: EdgeInsets.only(bottom: 20),
                                   child: FittedBox(
                                     child: FloatingActionButton(
