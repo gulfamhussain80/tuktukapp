@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hituktuk/ui/userhomepage.dart';
+import 'package:flutter/gestures.dart';
+import 'signup_page.dart';
 
 class SignInOne extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -40,6 +41,7 @@ class SignInOne extends StatelessWidget {
                               if (value.isEmpty) {
                                 return "Insert username";
                               }
+                              else return null;
                             },
                             style: TextStyle(
                                 color: Colors.black, fontFamily: 'SFUIDisplay'),
@@ -58,6 +60,7 @@ class SignInOne extends StatelessWidget {
                             if (value.isEmpty) {
                               return "Insert password";
                             }
+                            else return null;
                           },
                           obscureText: true,
                           style: TextStyle(
@@ -129,7 +132,9 @@ class SignInOne extends StatelessWidget {
                               fontFamily: 'SFUIDisplay',
                               color: Color(0xffff2d55),
                               fontSize: 15,
-                            ))
+                            ),
+                            recognizer: new TapGestureRecognizer()..onTap = () => Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()))
+                        )
                       ]),
                     ),
                   ),
