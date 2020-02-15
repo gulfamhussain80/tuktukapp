@@ -21,7 +21,7 @@ class _SignUpState extends State<SignUp> {
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                     labelText: "Name",
-                    hintText: "Enter Name"
+                    hintText: "Enter Full Name"
                   ),
                 )
                 ),
@@ -32,10 +32,10 @@ class _SignUpState extends State<SignUp> {
               child: ListTile(
                 title: (
                     TextFormField(
-                      keyboardType: TextInputType.text,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
+                          labelText: "Email",
+                          hintText: "Enter email address"
                       ),
                     )
                 ),
@@ -48,8 +48,54 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
+                          labelText: "Username",
+                          hintText: "Enter Username"
+                      ),
+                    )
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Select:",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Radio(
+                  value: 0,
+                  groupValue: "catergory",
+                ),
+                Text(
+                  "Rider"
+                ),
+                Radio(
+                  value: 0,
+                  groupValue: "catergory",
+                ),
+                Text(
+                    "Driver"
+                ),
+              ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                title: (
+                    TextFormField(
+                      keyboardType: TextInputType.text,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          labelText: "Password",
+                          hintText: "Enter Password"
                       ),
                     )
                 ),
@@ -62,51 +108,8 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
-                      ),
-                    )
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListTile(
-                title: (
-                    TextFormField(
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
-                      ),
-                    )
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListTile(
-                title: (
-                    TextFormField(
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
-                      ),
-                    )
-                ),
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListTile(
-                title: (
-                    TextFormField(
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          labelText: "Name",
-                          hintText: "Enter Name"
+                          labelText: "Confirm Password",
+                          hintText: "Re-Enter Password"
                       ),
                     )
                 ),
